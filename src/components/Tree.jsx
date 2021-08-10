@@ -1,16 +1,20 @@
-import React, { useEffect } from 'react';
-import { getFilesData } from '../api';
+import React from 'react';
+import TreeNode from './TreeNode';
+// import React, { useEffect } from 'react';
+// import { getFilesData } from '../api';
 
 
-const Tree = () => {
-  useEffect(() => {
-    getFilesData(20000).then(({data}) => console.log(data))
-  }, [])
-
+const Tree = ({data = []}) => {
+  // useEffect(() => {
+  //   getFilesData(20000).then(({data}) => console.log(data))
+  // }, [])
+  console.log('data', data)
 
   return (
     <div>
-      tree data
+      <ul>
+        {data.map(tree => <TreeNode node={tree} />)}
+      </ul>
       
     </div>
   )
