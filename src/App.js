@@ -4,10 +4,10 @@ import { fullFFStructure } from './data';
 
 const App = () => {
   return (
-    <div>
+    <>
       Happy coding!
       <Tree data={fullFFStructure}/>
-    </div>
+    </>
   )
 }
 

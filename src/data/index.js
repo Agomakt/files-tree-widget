@@ -140,6 +140,11 @@ export const fullFFStructure = [
     ],
   },
   {
+    id: 1,
+    title: 'empty directory',
+    children: [],
+  },
+  {
     id: 40000,
     title: 'images',
     children: [
