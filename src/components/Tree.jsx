@@ -1,19 +1,15 @@
 import React from 'react';
 import TreeNode from './TreeNode';
 
-// import React, { useEffect } from 'react';
-// import { getFilesData } from '../api';
-
-
 const Tree = ({data = []}) => {
-  // useEffect(() => {
-  //   getFilesData(20000).then(({data}) => console.log(data))
-  // }, [])
-  // console.log('data', data)
+  console.log('data', data)
 
   return (
     <div>
-      {data.map(tree => <TreeNode key={tree.id} node={tree} />)}
+      {data && data.map(tree => {
+        console.log('tree', tree)
+        return <TreeNode key={tree.id} node={tree} />
+      })}
       
       
     </div>
